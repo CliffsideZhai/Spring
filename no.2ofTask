@@ -15,8 +15,7 @@ import java.nio.file.Path;
 
 public class TaskFirst {
     public static void readFile(PrintStream output) {
-        String pathname = "C:\\mydircetory\\web_file.txt"; // 
-        //Java7的try-with-resources可以优雅关闭文件，异常时自动关闭文件；详细解读https://stackoverflow.com/a/12665271
+        String pathname = "C:\\mydircetory\\web_file.txt"; 
         try (FileReader reader = new FileReader(pathname);
              BufferedReader br = new BufferedReader(reader) // 建立一个对象，它把文件内容转成计算机能读懂的语言
         ) {
@@ -36,8 +35,8 @@ public class TaskFirst {
 	        try (FileWriter writer = new FileWriter(writeName);
 	             BufferedWriter out = new BufferedWriter(writer)
 	        ) {
-	            out.write("还在学习宋红康的java中，\r\n"); // \r\n即为换行
-	            out.write("不会的好多\r\n"); // \r\n即为换行
+	            out.write("还在学习宋红康的java中，\r\n");
+	            out.write("不会的好多\r\n"); 
 	            out.flush(); // 把缓存区内容压入文件
 	        }
 	    } catch (IOException e) {
